@@ -1,0 +1,3 @@
+string robot_name
+float32 linear_vel_x
+float32 angular_vel_z

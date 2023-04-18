@@ -1,0 +1,15 @@
+<launch>
+  
+  <node name="turtle1" pkg="turtlesim" type="turtlesim_node" respawn="true" output="screen"/>
+
+  <node name="follower" pkg="turtle_follow" type="turtle_follower.py"/>
+  <node name="Show" pkg="turtle_follow" type="Show.py" output="screen"/>
+
+  <node name="teleop" pkg="turtlesim" type="turtle_teleop_key"/>
+  
+  <remap from="turtle1/cmd_vel" to="turtle2/cmd_vel" />
+  <remap from="turtle1/pose" to="turtle2/pose" />
+  <node name="turtle2" pkg="turtlesim" type="turtlesim_node" respawn="true" output="screen"/>
+
+</launch>
+
